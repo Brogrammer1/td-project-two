@@ -2,6 +2,9 @@ from ciphers import Cipher
 
 
 class Polybius(Cipher):
+    """Polybius cipher class used for encrypting words according to the
+        polybius cipher
+        """
     keys = list("abcdefghijklmnopqrstuvwxyz")
 
     values2 = [11, 12, 13, 14, 15,
@@ -12,6 +15,11 @@ class Polybius(Cipher):
     code = dict(zip(keys, values2))
 
     def encrypt(self, text):
+        """
+        accepts a string and then it encrypts the string according to the
+        class cipher
+        and then returns a encrypted string
+        """
         word = []
         l_case_text = text.lower()
         for letter in l_case_text:
@@ -22,6 +30,11 @@ class Polybius(Cipher):
         return "".join(word)
 
     def decrypt(self, text):
+        """
+        accepts a string and then it decrypts the string according to the
+        class cipher
+        and then returns a decrypted string
+        """
         return_word = []
 
         answer = [text[i:i + 2] for i in range(0, len(text), 2)]

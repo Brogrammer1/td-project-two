@@ -3,14 +3,17 @@ import atbash
 import polybiussquare
 
 if __name__ == "__main__":
+
     print("Hello and welcome to my cipher program where"
           "you can encrypt and decrypt your words with well known ciphers")
+
     while True:
         first_response = input("please type a number to select what option\n\n"
                                "1. encrypt\n"
                                "2. decrypt\n"
                                "3. exit\n")
         if first_response.lower() == "1":
+
             second_response = input("please type a number to select "
                                     "what cipher\n\n"
                                     "1. keyword\n"
