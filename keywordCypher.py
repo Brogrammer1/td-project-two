@@ -5,12 +5,18 @@ class KeywordCipher(Cipher):
     keys = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     kyword = None
     kyword_list = []
+    kyword_list2 = []
 
     def __init__(self, keyword):
         for letter in self.keys:
             if letter not in keyword.upper():
                 self.kyword_list.append(letter)
-        self.kyword = keyword.upper() + "".join(self.kyword_list)
+
+        for char in keyword.upper():
+            if char not in self.kyword_list2:
+                self.kyword_list2.append(char)
+
+        self.kyword = "".join(self.kyword_list2) + "".join(self.kyword_list)
         self.values = list(self.kyword)
         self.cipher_code = dict(zip(self.keys, self.values))
 
