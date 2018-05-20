@@ -104,7 +104,8 @@ if __name__ == "__main__":
                 while True:
                     ps_cipher = polybiussquare.Polybius()
                     decrypted_word = ps_cipher.decrypt(
-                        input("Enter your code to decrypt. \n"))
+                        input("Enter your code to decrypt.(No special "
+                              "chars) \n"))
                     print("your decrypted word is {}".format(decrypted_word))
                     third_response = input(
                         "do you want to want to decrypt "

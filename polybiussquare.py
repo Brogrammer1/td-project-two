@@ -36,14 +36,13 @@ class Polybius(Cipher):
         and then returns a decrypted string
         """
         return_word = []
-
-        answer = [text[i:i + 2] for i in range(0, len(text), 2)]
-        for number in answer:
-            try:
+        first_list = text.split()
+        for blocks in first_list:
+            answer = [blocks[i:i + 2] for i in range(0, len(blocks), 2)]
+            for number in answer:
                 for key, value in self.code.items():
                     if int(number) == value:
                         return_word.append(key)
-            except ValueError:
-                return_word.append(number)
+            return_word.append(" ")
 
         return "".join(return_word).upper()
