@@ -116,5 +116,7 @@ if __name__ == "__main__":
                         pass
                     else:
                         break
-        else:
+        elif first_response == "3":
             break
+        else:
+            print("please choose one of the options 1, 2 or 3")
